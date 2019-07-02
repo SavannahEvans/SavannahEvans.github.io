@@ -1,5 +1,7 @@
 ---
 title: Profile
 layout: template
-filename: profile.md
---- 
+filename: profile
+---
+
+## This is the Profile page
