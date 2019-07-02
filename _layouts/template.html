@@ -1,7 +1,30 @@
-<h1>Static Webpage Test</h1>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Static Webpage Test</h1>
+      <h2 class="project-tagline"></h2>
+      {% for page in site.pages %}
+        <a href= {{ page.filename }} class="btn">{{ page.title }}</a>
+      {% endfor %}
+    </section>
 
-{% for page in site.pages %}
-    <a href={{ page.filename }}>{{ page.title }}</a>
-{% endfor %}
+    <section class="main-content">
+      
+      {{ content }}
 
-<p>{{content}}</p>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/SavannahEvans">Savannah Evans</a></span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
